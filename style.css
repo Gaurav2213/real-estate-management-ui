@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: url('https://images.pexels.com/photos/1519088/pexels-photo-1519088.jpeg?cs=srgb&dl=pexels-souvenirpixels-1519088.jpg&fm=jpg&_gl=1*i5k9rj*_ga*MTQ3NTU1Nzc1NC4xNzQyMzIwNjIw*_ga_8JE65Q40S6*MTc0MjMyMDYyMC4xLjEuMTc0MjMyMDY3MS.w.w.0.0..') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(8px) brightness(0.6); /* Softer blur with dark overlay */
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box, .register-box {
+    background: rgba(255, 255, 255, 0.15); /* Softer transparency */
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(20px); /* Glassmorphism effect */
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #e0e0e0;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #6c63ff; /* Vibrant modern purple */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5751d3; /* Slightly darker purple on hover */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+.options a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600; /* Make the link text bolder */
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 350px;
+    }
+    .login-box, .register-box {
+        padding: 30px;
+    }
+}
